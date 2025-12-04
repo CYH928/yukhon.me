@@ -298,6 +298,121 @@ section.experience ul.clubs li .date {
     margin-top: 6px;
 }
 
+/* projects */
+section.projects ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+}
+section.projects ul li {
+    background: #fff;
+    border: 1px solid #d2d2d7;
+    border-radius: 12px;
+    padding: 24px;
+    transition: all 0.3s ease;
+}
+section.projects ul li:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-color: #86868b;
+}
+section.projects ul li h3 {
+    color: #1d1d1f;
+    font-size: 21px;
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 12px;
+}
+section.projects ul li p {
+    color: #424245;
+    font-size: 17px;
+    font-weight: 400;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* awards */
+section.awards ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+section.awards ul li {
+    background: #fbfbfd;
+    padding: 16px 24px;
+    border-radius: 8px;
+    border-left: 4px solid #0071e3;
+    color: #1d1d1f;
+    font-size: 17px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+section.awards ul li:before {
+    content: '🏆';
+    margin-right: 12px;
+    font-size: 20px;
+}
+
+/* career goals */
+section.career-goals ol {
+    list-style: none;
+    padding: 0;
+    margin: 32px 0;
+    position: relative;
+}
+section.career-goals ol:before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #d2d2d7;
+}
+section.career-goals ol li {
+    margin-bottom: 32px;
+    padding-left: 48px;
+    position: relative;
+}
+section.career-goals ol li:before {
+    content: counter(list-item);
+    counter-increment: list-item;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 32px;
+    height: 32px;
+    background: #0071e3;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 32px;
+    font-weight: 600;
+    font-size: 14px;
+    z-index: 1;
+}
+section.career-goals ol li strong {
+    display: block;
+    font-size: 19px;
+    color: #1d1d1f;
+    margin-bottom: 4px;
+}
+section.career-goals .skills-roadmap p {
+    margin-bottom: 16px;
+    padding: 16px;
+    background: #f5f5f7;
+    border-radius: 8px;
+}
+section.career-goals .skills-roadmap p strong {
+    color: #0071e3;
+}
+
 /* awards & certificates */
 section.award ul {
     list-style: none;
@@ -402,15 +517,40 @@ section.language ul li .level {
 }
 
 /* skill */
-section.skill div {
-    display: flex;
-    flex-direction: row;
-    gap: 12px;
+section.skill .skill-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
 }
-section.skill div img {
-    aspect-ratio: 1;
-    object-fit: contain;
-    width: 64px;
+section.skill .skill-card {
+    background: #f5f5f7;
+    padding: 24px;
+    border-radius: 18px;
+    transition: transform 0.3s ease;
+}
+section.skill .skill-card:hover {
+    transform: translateY(-5px);
+}
+section.skill .skill-card .subhead {
+    font-size: 24px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #d2d2d7;
+    padding-bottom: 8px;
+}
+section.skill .skill-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+section.skill .skill-card ul li {
+    margin-bottom: 12px;
+    font-size: 17px;
+    line-height: 1.4;
+    color: #1d1d1f;
+}
+section.skill .skill-card ul li strong {
+    color: #000;
+    font-weight: 600;
 }
 
 /* footer */
